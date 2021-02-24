@@ -1,7 +1,9 @@
 import java.awt.*;
+
 import java.awt.event.*;
 
 public class login extends Frame implements ActionListener {
+
     Button b1 = new Button("Login");
     Button b2 = new Button("Reset");
     Label l1 = new Label("User Name");
@@ -58,6 +60,7 @@ public class login extends Frame implements ActionListener {
 }
 
 class loginsuccess extends Frame implements ActionListener {
+
     Label sl = new Label("SUCCESS FRAME");
     Label sl1 = new Label("wanna go to login page and try wrong credentials");
     Button bs = new Button("click me");
@@ -80,6 +83,7 @@ class loginsuccess extends Frame implements ActionListener {
 }
 
 class loginfailure extends Frame implements ActionListener {
+
     Label fl = new Label("FAILURE FRAME");
     Label fl1 = new Label("wanna go to login page and try again");
     Button bf = new Button("click me");
