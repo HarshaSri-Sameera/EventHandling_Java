@@ -1,13 +1,14 @@
 import java.awt.*;
-
 import java.awt.event.*;
 
 public class login extends Frame implements ActionListener {
-
     Button b1 = new Button("Login");
     Button b2 = new Button("Reset");
     Label l1 = new Label("User Name");
     Label l2 = new Label("Password");
+    Label l3 = new Label("Hint:{User Name: Apple");
+    Label l4 = new Label("Password: 1234}");
+
     TextField t1 = new TextField(20);
     TextField t2 = new TextField(20);
 
@@ -23,6 +24,8 @@ public class login extends Frame implements ActionListener {
         add(t2);
         add(b1);
         add(b2);
+        add(l3);
+        add(l4);
 
         l1.setBounds(100, 100, 100, 20);
         t1.setBounds(220, 100, 100, 20);
@@ -30,6 +33,8 @@ public class login extends Frame implements ActionListener {
         t2.setBounds(220, 120, 100, 20);
         b1.setBounds(120, 150, 100, 20);
         b2.setBounds(240, 150, 100, 20);
+        l3.setBounds(150, 200, 200, 30);
+        l4.setBounds(176, 230, 200, 30);
 
         b1.addActionListener(this);
         b2.addActionListener(this);
@@ -37,7 +42,7 @@ public class login extends Frame implements ActionListener {
 
     public void actionPerformed(ActionEvent ae) {
         if (ae.getSource() == b1) {
-            if (t1.getText().equals("apple") && t2.getText().equals("1234")) {
+            if (t1.getText().equals("Apple") && t2.getText().equals("1234")) {
 
                 loginsuccess ls = new loginsuccess();
 
@@ -60,9 +65,8 @@ public class login extends Frame implements ActionListener {
 }
 
 class loginsuccess extends Frame implements ActionListener {
-
     Label sl = new Label("SUCCESS FRAME");
-    Label sl1 = new Label("wanna go to login page and try wrong credentials");
+    Label sl1 = new Label("wanna go to login page and try wrong credentials: ");
     Button bs = new Button("click me");
 
     public loginsuccess() {
@@ -83,9 +87,8 @@ class loginsuccess extends Frame implements ActionListener {
 }
 
 class loginfailure extends Frame implements ActionListener {
-
     Label fl = new Label("FAILURE FRAME");
-    Label fl1 = new Label("wanna go to login page and try again");
+    Label fl1 = new Label("wanna go to login page and try again: ");
     Button bf = new Button("click me");
 
     public loginfailure() {
