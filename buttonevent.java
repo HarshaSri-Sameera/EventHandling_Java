@@ -28,11 +28,9 @@ public class buttonevent extends Frame implements ActionListener {
         System.out.println(num);
         if (cmd.equals("click me")) {
             num++;
-            System.out.println(num);
         }
         if ((num % 2) != 0) {
             t1.setText("Hello Buddy!");
-            System.out.println(num);
         }
         if ((num % 2) == 0) {
             t1.setText(" ");
