@@ -23,9 +23,7 @@ public class buttonevent extends Frame implements ActionListener {
         String cmd = ae.getActionCommand();
         if (num == 0) {
             System.out.println(cmd);
-        }
-
-        System.out.println(num);
+        }    
         if (cmd.equals("click me")) {
             num++;
         }
